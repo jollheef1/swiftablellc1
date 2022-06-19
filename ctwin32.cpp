@@ -1,7 +1,6 @@
 
 #include "stdafx.h"
 #include "ctwin32.h"
-#include "resource.h"
 
 namespace ctwin32
 {
@@ -429,7 +428,7 @@ namespace ctwin32
 	}
 	void ctDialog::drawBmp( int resID, int cx, int cy, int width, int height, string partName )
 	{
-		bmpInfos.push_back( {partName,"",cx,cy,width,height,IDB_BITMAP1} );
+		bmpInfos.push_back( {partName,"",cx,cy,width,height,resID} );
 		InvalidateRect( hMainDlg, NULL, FALSE );
 	}
 	void ctDialog::eraseBmp( string partName )
