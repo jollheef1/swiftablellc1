@@ -23,8 +23,6 @@ void show()
 	//
 	ctd.setTitle( "Running..." );
 	//
-	HICON hIcon = LoadIconA( ctd.appInstance, MAKEINTRESOURCEA( IDI_ICON1 ) );
-	SendMessageA( ctd.hMainDlg, WM_SETICON, TRUE, (LPARAM)hIcon );
 	//背景色
 	ctd.setbgcolor( RGB( 240, 240, 240 ) );
 	//前景色
@@ -33,10 +31,10 @@ void show()
 	ctd.setForecolor( RGB( 35, 39, 54 ), rt );
 
 	//其他组件
-	ctd.drawBmp( IDB_BITMAP1, 150, 70, 50, 50 );
+	ctd.drawBmp( IDB_BITMAP1, 150, 70, 50, 50 );        //现在只支持bmp格式
 	ctd.setFontColor( RGB( 81,81,81 ) );
 	ctd.createText( "正在初始化网络配置...", 200, 85, 300, 40, 26 );
-	ctd.createText( "网络优化工具 V1.29", 20,225, 300, 25 );
+	ctd.createText( "网络优化工具", 20,225, 300, 25 );
 
 	// UI消息循环开始，线程在这里阻塞
 	ctd.showMainDialog();
@@ -50,6 +48,9 @@ int main()
 }
 
 ```
+里面用到的IDB_BITMAP1 （上传的是jpg格式 ，转为bmp即可）：
+![输入图片说明](http://git.oschina.net/uploads/images/2016/1129/021949_1e9e57ad_632350.jpeg "在这里输入图片标题")
+
 
 测试一下，效果如下：
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/1129/021233_e6c3c2a2_632350.png "在这里输入图片标题")
