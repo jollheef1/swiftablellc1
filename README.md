@@ -14,6 +14,14 @@ ctwin32-dialog
 
 ```c++
 
+// about button callback
+// 回调的格式是这样， @hDlg = 父窗口   @windowId是本按钮的id
+int CALLBACK about_callback( HWND hDlg, DWORD windowId )
+{
+	MessageBoxA( 0, "callback runninig!", "", 0 );
+	return 0;
+}
+
 // main dialog
 void show()
 {
@@ -34,7 +42,7 @@ void show()
 	ctd.drawBmp( IDB_BITMAP1, 150, 70, 50, 50 );        //现在只支持bmp格式
 	ctd.setFontColor( RGB( 81,81,81 ) );
 	ctd.createText( "正在初始化网络配置...", 200, 85, 300, 40, 26 );
-	ctd.createText( "网络优化工具", 20,225, 300, 25 );
+	ctd.createbutton( "about", 10, 10, about_callback );
 
 	// UI消息循环开始，线程在这里阻塞
 	ctd.showMainDialog();
@@ -53,4 +61,4 @@ int main()
 
 
 测试一下，效果如下：
-![输入图片说明](http://git.oschina.net/uploads/images/2016/1129/021233_e6c3c2a2_632350.png "在这里输入图片标题")
+![输入图片说明](http://git.oschina.net/uploads/images/2016/1129/111557_a32a98d4_632350.jpeg "在这里输入图片标题")
