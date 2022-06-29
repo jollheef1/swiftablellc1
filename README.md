@@ -63,4 +63,7 @@ int main()
 测试一下，效果如下：
 
 ![1](http://git.oschina.net/uploads/images/2016/1129/113619_41534a9e_632350.jpeg "在这里输入图片标题")
+
+点击按钮：
+
 ![2](http://git.oschina.net/uploads/images/2016/1129/113628_5b63ab04_632350.jpeg "在这里输入图片标题")
